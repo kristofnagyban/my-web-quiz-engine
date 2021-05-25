@@ -1,6 +1,7 @@
 package com.kristofnagyban.mywebquizengine.controller;
 
 import com.kristofnagyban.mywebquizengine.domain.User;
+import com.kristofnagyban.mywebquizengine.dto.UserCreateData;
 import com.kristofnagyban.mywebquizengine.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,5 +32,9 @@ public class UserController {
         return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
     }
 
+    @PostMapping
+    public ResponseEntity<String> createUser(@RequestBody UserCreateData data) {
+        return new ResponseEntity<>(userService.createUser(data), HttpStatus.OK);
+    }
 
 }

@@ -5,7 +5,7 @@ public class UserCreateData {
     private String firstName;
     private String lastName;
     private String email;
-    private String passwordHashed;
+    private String password;
 
     public UserCreateData() { }
 
@@ -33,11 +33,11 @@ public class UserCreateData {
         this.email = email;
     }
 
-    public String getPasswordHashed() {
-        return passwordHashed;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswordHashed(String passwordHashed) {
-        this.passwordHashed = passwordHashed;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

@@ -20,7 +20,7 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Attempt> attempts;
 
-    private User() {
+    public User() {
     }
 
     public Long getId() {
