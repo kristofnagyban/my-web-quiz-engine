@@ -13,10 +13,10 @@ import java.util.Optional;
 @Transactional
 public class UserService {
 
-    private final UserRepository<User, Long> userRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    private UserService(UserRepository<User, Long> userRepository) {
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
